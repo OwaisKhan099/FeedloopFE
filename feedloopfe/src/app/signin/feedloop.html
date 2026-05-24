@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FeedLoop | AI Feedback Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ["Inter", "Arial", "sans-serif"] },
+          colors: {
+            ink: "#090d1f",
+            muted: "#667085",
+            pinky: "#ff6f97",
+            violetx: "#8c7cff",
+            navyx: "#111229"
+          },
+          boxShadow: {
+            soft: "0 22px 70px rgba(35, 28, 72, .12)",
+            card: "0 18px 48px rgba(28,31,55,.08)"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-inter text-ink bg-white pb-28 md:pb-32">
+  <nav class="sticky top-0 z-30 h-[58px] border-b border-slate-200/80 bg-white/95 backdrop-blur-xl">
+    <div class="mx-auto flex h-full w-[min(1180px,calc(100%-48px))] items-center justify-between gap-7">
+      <a href="#" class="flex items-center gap-2 text-[22px] font-black tracking-tight">
+        <span class="relative block h-[27px] w-[27px] -rotate-6 rounded-[8px_8px_16px_8px] bg-gradient-to-br from-pinky to-violetx">
+          <span class="absolute -right-2 -top-2 rotate-[28deg] text-[18px] text-navyx">▲</span>
+        </span>
+        <span>FEED<span class="text-pinky">LOOP</span></span>
+      </a>
+
+      <div class="hidden items-center gap-7 text-sm font-bold text-slate-900 lg:flex">
+        <a href="#product">Product <span class="text-xs">⌄</span></a>
+        <a href="#solutions">Solutions <span class="text-xs">⌄</span></a>
+        <a href="#resources">Resources <span class="text-xs">⌄</span></a>
+        <a href="#pricing">Pricing</a>
+        <a href="#test">Get Paid to Test</a>
+        <a href="#demo">Get Free Demo</a>
+      </div>
+
+      <div class="hidden items-center gap-3 lg:flex">
+        <a href="#login" class="inline-flex h-[43px] items-center rounded-[9px] border border-slate-300 bg-white px-6 text-sm font-extrabold">Login</a>
+        <a href="#start" class="inline-flex h-[43px] items-center rounded-[9px] bg-gradient-to-r from-pinky to-violetx px-6 text-sm font-extrabold text-white shadow-lg shadow-violetx/20">Get Started Free</a>
+      </div>
+      <div class="text-4xl leading-none lg:hidden">☰</div>
+    </div>
+  </nav>
+
+  <header id="start" class="overflow-hidden bg-[radial-gradient(circle_at_12%_72%,rgba(172,151,255,.32),transparent_34%),radial-gradient(circle_at_75%_82%,rgba(255,131,173,.32),transparent_32%),linear-gradient(180deg,#fbfcff_0%,#fff8fb_100%)] px-4 py-16 text-center md:py-24">
+    <div class="mx-auto max-w-[1180px]">
+      <div class="mb-8 flex flex-wrap items-center justify-center gap-3">
+        <div class="flex h-[34px] items-center rounded-lg border border-rose-300 bg-white px-3 text-[10px] font-black leading-tight text-rose-500 shadow-card">🏆&nbsp; PRODUCT HUNT<br>#1 Product of the Day</div>
+        <div class="flex h-[34px] items-center gap-2 rounded-lg border border-rose-300 bg-white px-3 text-[10px] font-black text-rose-500 shadow-card">G2 <span class="text-amber-400">★★★★★</span> 4.8/5</div>
+        <div class="flex h-[34px] items-center rounded-lg bg-[#0d3150] px-3 text-[10px] font-black text-cyan-100 shadow-card">Capterra&nbsp; <strong>4.9</strong></div>
+        <div class="flex h-[34px] items-center gap-1 rounded-lg bg-[#29233f] px-3 text-[10px] font-black text-yellow-100 shadow-card">Software Advice <span class="text-amber-400">★★★★★</span> 4.9</div>
+      </div>
+
+      <h1 class="mx-auto max-w-[760px] text-[44px] font-extrabold leading-[.95] tracking-normal md:text-[72px]">Customer Feedback <span class="block font-normal">shouldn’t cost a fortune</span></h1>
+      <p class="mx-auto mt-6 max-w-[740px] text-[22px] leading-snug text-slate-600 md:text-[34px]">Run AI user testing, moderated interviews, and intelligent surveys all in one unified feedback platform.</p>
+      <div class="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="#demo" class="inline-flex h-[43px] items-center rounded-[9px] bg-gradient-to-r from-pinky to-violetx px-6 text-sm font-extrabold text-white shadow-lg shadow-violetx/20">Get Started Free →</a>
+        <a href="#product" class="inline-flex h-[43px] items-center rounded-[9px] border border-slate-300 bg-white px-7 text-sm font-extrabold">Learn More</a>
+      </div>
+      <p class="mt-3 text-xs italic text-slate-500">No credit card required</p>
+    </div>
+  </header>
+
+  <section class="bg-white px-4 py-14 text-center md:py-24">
+    <div class="mx-auto max-w-[1180px]">
+      <h2 class="text-[26px] font-bold text-slate-500">Trusted by teams building customer-first experiences</h2>
+      <div class="mx-auto mt-10 grid max-w-[940px] grid-cols-1 gap-4 opacity-55 md:grid-cols-5">
+        <div class="grid h-12 place-items-center rounded-2xl border border-slate-200 font-black text-slate-500">NOVA</div>
+        <div class="grid h-12 place-items-center rounded-2xl border border-slate-200 font-black text-slate-500">APEX</div>
+        <div class="grid h-12 place-items-center rounded-2xl border border-slate-200 font-black text-slate-500">ORBIT</div>
+        <div class="grid h-12 place-items-center rounded-2xl border border-slate-200 font-black text-slate-500">PULSE</div>
+        <div class="grid h-12 place-items-center rounded-2xl border border-slate-200 font-black text-slate-500">ATLAS</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="product" class="px-4 py-14 md:py-20">
+    <div class="mx-auto max-w-[1180px]">
+      <div class="grid items-center gap-11 rounded-3xl bg-gradient-to-r from-rose-50 via-indigo-50 to-[#bdccff] p-6 shadow-soft md:grid-cols-2 md:p-12">
+        <div>
+          <h2 class="mb-6 text-[34px] font-extrabold leading-none md:text-[52px]">Traditional Feedback<br>Is Broken</h2>
+          <div class="mb-6">
+            <h3 class="mb-2 text-[23px] font-extrabold">Slow Research Cycles</h3>
+            <p class="text-[17px] leading-relaxed text-slate-500">Recruiting participants, moderating sessions, and analyzing recordings can take weeks before decisions are made.</p>
+          </div>
+          <div class="mb-6">
+            <h3 class="mb-2 text-[23px] font-extrabold">Manual Analysis Bottlenecks</h3>
+            <p class="text-[17px] leading-relaxed text-slate-500">Extracting themes from qualitative feedback requires hours of tagging, reviewing, and summarizing.</p>
+          </div>
+          <div class="mb-6">
+            <h3 class="mb-2 text-[23px] font-extrabold">Surface-Level Understanding</h3>
+            <p class="text-[17px] leading-relaxed text-slate-500">Traditional tools capture what users say but not the deeper “why” behind behavior.</p>
+          </div>
+          <div class="mb-7">
+            <h3 class="mb-2 text-[23px] font-extrabold">Disconnected Tools</h3>
+            <p class="text-[17px] leading-relaxed text-slate-500">Surveys, user tests, interviews, and reports live in separate systems, creating fragmented insights and wasted time.</p>
+          </div>
+          <a href="#demo" class="inline-flex h-[43px] items-center rounded-[9px] bg-gradient-to-r from-pinky to-violetx px-6 text-sm font-extrabold text-white">Try us and you’ll see →</a>
+        </div>
+
+        <div class="relative min-h-[330px] overflow-hidden rounded-2xl border-[8px] border-navyx bg-white shadow-2xl shadow-slate-900/20">
+          <div class="flex h-11 items-center gap-2 bg-navyx px-4 text-[11px] text-white"><span class="h-2 w-2 rounded-full bg-violetx"></span>FeedLoop research session • AI analysis running</div>
+          <div class="p-5">
+            <div class="mb-4 flex gap-2"><span class="h-3 w-20 rounded-full bg-pink-200"></span><span class="h-3 w-20 rounded-full bg-slate-100"></span><span class="h-3 w-20 rounded-full bg-slate-100"></span></div>
+            <div class="space-y-3"><span class="block h-3 w-10/12 rounded-full bg-slate-100"></span><span class="block h-3 w-7/12 rounded-full bg-slate-100"></span><span class="block h-3 w-9/12 rounded-full bg-slate-100"></span><span class="block h-3 w-10/12 rounded-full bg-slate-100"></span></div>
+          </div>
+          <div class="absolute -left-8 top-28 grid h-16 w-16 place-items-center rounded-full bg-white text-4xl text-violetx shadow-xl">✦</div>
+          <div class="absolute right-3 top-24 w-[190px] -rotate-6 rounded-2xl bg-white p-4 text-xs shadow-2xl md:-right-9"><strong class="mb-2 inline-block rounded-full bg-gradient-to-r from-pinky to-violetx px-3 py-1 text-[10px] text-white">Task 1</strong><br>Where would you go to find automation settings?</div>
+          <div class="absolute inset-0 m-auto grid h-16 w-16 place-items-center rounded-full bg-white/80 text-3xl text-violetx">▶</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="solutions" class="px-4 py-14 text-center md:py-20">
+    <div class="mx-auto max-w-[1180px]">
+      <p class="mb-4 text-sm font-black text-violetx">AI-FIRST FEEDBACK PLATFORM</p>
+      <h2 class="text-[34px] font-extrabold leading-none md:text-[52px]">Meet your all-in-one research engine</h2>
+      <p class="mx-auto mb-12 mt-5 max-w-[760px] text-[22px] leading-relaxed text-slate-500 md:text-2xl">FeedLoop AI drives the entire feedback experience from question design to test creation, interviews, synthesis, and reporting.</p>
+
+      <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white text-left shadow-card">
+          <div class="p-7"><h3 class="mb-4 text-2xl font-extrabold">User Testing</h3><p class="leading-relaxed text-slate-500">Watch the video and the AI sends relevant test tasks based on what users are seeing in real time.</p></div>
+          <div class="relative h-48 overflow-hidden border-t border-slate-200 bg-gradient-to-br from-rose-50 to-indigo-50"><div class="absolute bottom-[-30px] left-7 h-36 w-52 rounded-2xl border bg-white p-4 shadow-xl"><span class="block h-3 w-10/12 rounded-full bg-slate-100"></span><br><span class="block h-3 w-7/12 rounded-full bg-slate-100"></span></div><div class="absolute right-4 top-6 max-w-[126px] rounded-2xl bg-white p-3 text-[10px] shadow-xl">AI follows every click and comment.</div></div>
+        </article>
+        <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white text-left shadow-card">
+          <div class="p-7"><h3 class="mb-4 text-2xl font-extrabold">AI Forms</h3><p class="leading-relaxed text-slate-500">Ask guided questions and let AI adapt the flow based on each real-time response.</p></div>
+          <div class="relative h-48 overflow-hidden border-t border-slate-200 bg-gradient-to-br from-rose-50 to-indigo-50"><div class="absolute bottom-[-30px] left-7 h-36 w-52 rounded-2xl border bg-white p-4 shadow-xl"><span class="block h-3 w-9/12 rounded-full bg-slate-100"></span><br><span class="block h-3 w-10/12 rounded-full bg-slate-100"></span></div><div class="absolute right-4 top-6 max-w-[126px] rounded-2xl bg-white p-3 text-[10px] shadow-xl">Smart follow-up question ready.</div></div>
+        </article>
+        <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white text-left shadow-card">
+          <div class="p-7"><h3 class="mb-4 text-2xl font-extrabold">Interviews</h3><p class="leading-relaxed text-slate-500">Run moderated research with AI notes, transcript highlights, and instant summaries.</p></div>
+          <div class="relative h-48 overflow-hidden border-t border-slate-200 bg-gradient-to-br from-rose-50 to-indigo-50"><div class="absolute bottom-[-30px] left-7 h-36 w-52 rounded-2xl border bg-white p-4 shadow-xl"><span class="block h-3 w-10/12 rounded-full bg-slate-100"></span><br><span class="block h-3 w-8/12 rounded-full bg-slate-100"></span></div><div class="absolute right-4 top-6 max-w-[126px] rounded-2xl bg-white p-3 text-[10px] shadow-xl">Theme detected: onboarding confusion.</div></div>
+        </article>
+        <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white text-left shadow-card">
+          <div class="p-7"><h3 class="mb-4 text-2xl font-extrabold">Insights</h3><p class="leading-relaxed text-slate-500">Turn every session into prioritized findings, shareable clips, and product-ready recommendations.</p></div>
+          <div class="relative h-48 overflow-hidden border-t border-slate-200 bg-gradient-to-br from-rose-50 to-indigo-50"><div class="absolute bottom-[-30px] left-7 h-36 w-52 rounded-2xl border bg-white p-4 shadow-xl"><span class="block h-3 w-7/12 rounded-full bg-slate-100"></span><br><span class="block h-3 w-10/12 rounded-full bg-slate-100"></span></div><div class="absolute right-4 top-6 max-w-[126px] rounded-2xl bg-white p-3 text-[10px] shadow-xl">Top insight ranked by impact.</div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" class="bg-slate-50 px-4 py-14 text-center md:py-20">
+    <div class="mx-auto max-w-[1180px]">
+      <p class="mb-4 text-sm font-black text-violetx">BUILT FOR EVERY TEAM</p>
+      <h2 class="text-[34px] font-extrabold leading-none md:text-[52px]">Feedback that fits how teams work</h2>
+      <p class="mx-auto mb-11 mt-5 max-w-[760px] text-[22px] leading-relaxed text-slate-500 md:text-2xl">From product discovery to marketing research, FeedLoop keeps customers close without slowing teams down.</p>
+      <div class="grid gap-9 text-left lg:grid-cols-[290px_1fr]">
+        <div class="grid content-start gap-3">
+          <button class="min-h-[58px] rounded-xl bg-gradient-to-r from-pinky to-violetx px-5 text-left font-extrabold text-white">Product Teams</button>
+          <button class="min-h-[58px] rounded-xl border border-slate-200 bg-white px-5 text-left font-extrabold text-slate-700">UX Researchers</button>
+          <button class="min-h-[58px] rounded-xl border border-slate-200 bg-white px-5 text-left font-extrabold text-slate-700">Marketing Teams</button>
+          <button class="min-h-[58px] rounded-xl border border-slate-200 bg-white px-5 text-left font-extrabold text-slate-700">Founders</button>
+        </div>
+        <div class="grid items-center gap-8 rounded-3xl border border-slate-200 bg-white p-7 shadow-soft md:grid-cols-2 md:p-10">
+          <div>
+            <h3 class="mb-4 text-[34px] font-extrabold">Build with confidence</h3>
+            <p class="mb-6 text-lg leading-relaxed text-slate-500">Collect high-quality feedback, understand user intent, and share the strongest evidence with everyone who needs it.</p>
+            <div class="space-y-4 font-bold text-slate-700">
+              <div><span class="mr-2 inline-grid h-6 w-6 place-items-center rounded-full bg-gradient-to-r from-pinky to-violetx text-xs text-white">✓</span>Validate ideas before you build</div>
+              <div><span class="mr-2 inline-grid h-6 w-6 place-items-center rounded-full bg-gradient-to-r from-pinky to-violetx text-xs text-white">✓</span>Find friction in user journeys</div>
+              <div><span class="mr-2 inline-grid h-6 w-6 place-items-center rounded-full bg-gradient-to-r from-pinky to-violetx text-xs text-white">✓</span>Create reports your team can act on</div>
+            </div>
+          </div>
+          <div class="relative min-h-[270px] overflow-hidden rounded-2xl border-[8px] border-navyx bg-white shadow-2xl shadow-slate-900/20">
+            <div class="flex h-11 items-center gap-2 bg-navyx px-4 text-[11px] text-white"><span class="h-2 w-2 rounded-full bg-violetx"></span>FeedLoop insights board</div>
+            <div class="p-5"><div class="mb-4 flex gap-2"><span class="h-3 w-20 rounded-full bg-pink-200"></span><span class="h-3 w-20 rounded-full bg-slate-100"></span></div><div class="space-y-3"><span class="block h-3 w-10/12 rounded-full bg-slate-100"></span><span class="block h-3 w-7/12 rounded-full bg-slate-100"></span><span class="block h-3 w-9/12 rounded-full bg-slate-100"></span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="px-4 py-14 md:py-20">
+    <div class="mx-auto grid max-w-[1180px] items-center gap-10 md:grid-cols-2">
+      <div>
+        <p class="mb-4 text-sm font-black text-violetx">CONNECTED WORKFLOWS</p>
+        <h2 class="text-[34px] font-extrabold leading-none md:text-[52px]">Bring feedback into every tool you already use</h2>
+        <p class="my-6 text-[22px] leading-relaxed text-slate-500 md:text-2xl">FeedLoop connects research, support, design, and product workflows so insights never get trapped in one tab.</p>
+        <a href="#demo" class="inline-flex h-[43px] items-center rounded-[9px] bg-gradient-to-r from-pinky to-violetx px-6 text-sm font-extrabold text-white">Explore integrations →</a>
+      </div>
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+        <div class="grid h-28 place-items-center rounded-3xl border bg-white font-black text-slate-600 shadow-card"><div><div class="mx-auto mb-2 h-11 w-11 rounded-2xl bg-gradient-to-br from-pinky to-violetx"></div>Slack</div></div>
+        <div class="grid h-28 place-items-center rounded-3xl border bg-white font-black text-slate-600 shadow-card"><div><div class="mx-auto mb-2 h-11 w-11 rounded-2xl bg-gradient-to-br from-pinky to-violetx"></div>Figma</div></div>
+        <div class="grid h-28 place-items-center rounded-3xl border bg-white font-black text-slate-600 shadow-card"><div><div class="mx-auto mb-2 h-11 w-11 rounded-2xl bg-gradient-to-br from-pinky to-violetx"></div>Notion</div></div>
+        <div class="grid h-28 place-items-center rounded-3xl border bg-white font-black text-slate-600 shadow-card"><div><div class="mx-auto mb-2 h-11 w-11 rounded-2xl bg-gradient-to-br from-pinky to-violetx"></div>HubSpot</div></div>
+        <div class="grid h-28 place-items-center rounded-3xl border bg-white font-black text-slate-600 shadow-card"><div><div class="mx-auto mb-2 h-11 w-11 rounded-2xl bg-gradient-to-br from-pinky to-violetx"></div>Linear</div></div>
+        <div class="grid h-28 place-items-center rounded-3xl border bg-white font-black text-slate-600 shadow-card"><div><div class="mx-auto mb-2 h-11 w-11 rounded-2xl bg-gradient-to-br from-pinky to-violetx"></div>Zapier</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="test" class="bg-gradient-to-b from-white to-slate-50 px-4 py-14 text-center md:py-20">
+    <div class="mx-auto max-w-[1180px]">
+      <p class="mb-4 text-sm font-black text-violetx">LOVED BY CUSTOMER-FIRST TEAMS</p>
+      <h2 class="mb-10 text-[34px] font-extrabold leading-none md:text-[52px]">The fastest way to understand users</h2>
+      <div class="grid gap-5 md:grid-cols-3">
+        <div class="rounded-3xl border bg-white p-7 text-left shadow-card"><p class="mb-7 leading-relaxed text-slate-700">“FeedLoop helped us replace scattered notes with clear decisions. Our team finally sees the customer story in one place.”</p><div class="flex items-center gap-3"><div class="h-11 w-11 rounded-full bg-gradient-to-br from-pink-100 to-indigo-300"></div><div><strong class="block text-sm">Ayesha Khan</strong><span class="text-sm text-slate-500">Product Lead</span></div></div></div>
+        <div class="rounded-3xl border bg-white p-7 text-left shadow-card"><p class="mb-7 leading-relaxed text-slate-700">“The AI follow-ups feel like having an extra researcher in every study. It finds the details our old surveys missed.”</p><div class="flex items-center gap-3"><div class="h-11 w-11 rounded-full bg-gradient-to-br from-pink-100 to-indigo-300"></div><div><strong class="block text-sm">Daniel Park</strong><span class="text-sm text-slate-500">UX Researcher</span></div></div></div>
+        <div class="rounded-3xl border bg-white p-7 text-left shadow-card"><p class="mb-7 leading-relaxed text-slate-700">“We cut the time from interviews to insights dramatically and our stakeholders actually read the reports now.”</p><div class="flex items-center gap-3"><div class="h-11 w-11 rounded-full bg-gradient-to-br from-pink-100 to-indigo-300"></div><div><strong class="block text-sm">Mina Torres</strong><span class="text-sm text-slate-500">Growth Manager</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="bg-[radial-gradient(circle_at_15%_60%,rgba(255,111,151,.18),transparent_28%),radial-gradient(circle_at_85%_25%,rgba(140,124,255,.22),transparent_32%),#111229] px-4 py-20 text-center text-white">
+    <div class="mx-auto max-w-[1180px]">
+      <h2 class="mx-auto max-w-[780px] text-[38px] font-extrabold leading-tight md:text-[62px]">Customer feedback that moves as fast as your team</h2>
+      <p class="mx-auto my-7 max-w-[720px] text-xl leading-relaxed text-slate-300">Create AI user tests, adaptive surveys, interviews, and decision-ready reports without stitching together five different tools.</p>
+      <a href="#" class="inline-flex h-[43px] items-center rounded-[9px] bg-gradient-to-r from-pinky to-violetx px-6 text-sm font-extrabold text-white">Get Started Free →</a>
+      <p class="mt-3 text-xs italic text-slate-400">No credit card required</p>
+    </div>
+  </section>
+
+  <footer class="bg-white px-4 py-12 text-slate-600">
+    <div class="mx-auto grid max-w-[1180px] gap-8 md:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
+      <div>
+        <a href="#" class="mb-4 flex items-center gap-2 text-[22px] font-black tracking-tight text-ink"><span class="relative block h-[27px] w-[27px] -rotate-6 rounded-[8px_8px_16px_8px] bg-gradient-to-br from-pinky to-violetx"><span class="absolute -right-2 -top-2 rotate-[28deg] text-[18px] text-navyx">▲</span></span><span>FEED<span class="text-pinky">LOOP</span></span></a>
+        <p>AI user testing, interviews, surveys, and customer insights in one unified feedback platform.</p>
+      </div>
+      <div><h4 class="mb-4 text-sm font-black text-ink">Product</h4><a class="mb-3 block">User Testing</a><a class="mb-3 block">AI Forms</a><a class="mb-3 block">Interviews</a><a class="mb-3 block">Insights</a></div>
+      <div><h4 class="mb-4 text-sm font-black text-ink">Solutions</h4><a class="mb-3 block">Product</a><a class="mb-3 block">UX Research</a><a class="mb-3 block">Marketing</a><a class="mb-3 block">Startups</a></div>
+      <div><h4 class="mb-4 text-sm font-black text-ink">Resources</h4><a class="mb-3 block">Blog</a><a class="mb-3 block">Guides</a><a class="mb-3 block">Templates</a><a class="mb-3 block">Help Center</a></div>
+      <div><h4 class="mb-4 text-sm font-black text-ink">Company</h4><a class="mb-3 block">Pricing</a><a class="mb-3 block">Customers</a><a class="mb-3 block">Contact</a><a class="mb-3 block">Login</a></div>
+    </div>
+  </footer>
+
+  <div class="fixed bottom-0 left-3 right-3 z-40 rounded-t-3xl border border-slate-200 bg-white/95 p-4 shadow-[0_-12px_45px_rgba(21,21,44,.11)] backdrop-blur md:block">
+    <div class="flex items-center gap-3">
+      <div class="h-10 w-10 rounded-full border-[3px] border-white bg-[radial-gradient(circle_at_30%_30%,#fff,#8c7cff_35%,#101326_36%)] shadow-lg"></div>
+      <div class="flex h-11 flex-1 items-center rounded-full border border-slate-200 px-5 text-slate-500">Ask your question</div>
+      <button class="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-br from-pinky to-violetx text-xl text-white">⌁</button>
+    </div>
+    <div class="mt-3 flex flex-wrap justify-center gap-2">
+      <span class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-600">How do you create a survey?</span>
+      <span class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-600">I need help with my account</span>
+      <span class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-600">I’d like a demo</span>
+    </div>
+  </div>
+</body>
+</html>
