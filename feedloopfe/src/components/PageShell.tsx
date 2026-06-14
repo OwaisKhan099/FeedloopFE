@@ -16,8 +16,14 @@ const NAV_MODULES = [
             { label: "Company Info", href: "/company/info" },
         ],
     },
-    // Add more modules here:
-    // { label: "Users", icon: "👥", children: [{ label: "User List", href: "/users" }] },
+    {
+        label: "Surveys",
+        icon: "📝",
+        children: [
+            { label: "All Surveys", href: "/survey" },
+            { label: "Create Survey", href: "/survey/create" },
+        ],
+    },
 ];
 
 export default function PageShell({ children }: { children: React.ReactNode }) {
@@ -25,7 +31,7 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
     const pathname = usePathname(); // current URL path — used to highlight active menu item
 
     const [sidebarOpen, setSidebarOpen] = useState(true);   // desktop: sidebar expanded or collapsed
-    const [openModules, setOpenModules] = useState<string[]>(["Company"]); // which dropdowns are open
+    const [openModules, setOpenModules] = useState<string[]>(["Company", "Surveys"]); // which dropdowns are open
 
     // Toggle a module's dropdown open/closed
     function toggleModule(label: string) {
