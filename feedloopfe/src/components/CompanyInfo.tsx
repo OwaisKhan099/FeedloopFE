@@ -69,12 +69,8 @@ export default function CompanyInfo() {
             return; // stop here, don't attempt the fetch
         }
 
-        // Read the backend base URL from the environment variable in .env.local
-        // e.g. NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
-        const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
-
-        // Send GET request to /company/info with the JWT token in the Authorization header
-        fetch(`${baseUrl}/company/info`, {
+        // Use same-origin API route so browser CORS and env issues do not break requests.
+        fetch(`/api/company/info`, {
             method: "GET",
             headers: {
                 Authorization: `${tokenType} ${accessToken}`, // e.g. "bearer eyJhbGci..."
@@ -164,10 +160,8 @@ export default function CompanyInfo() {
             return;
         }
 
-        const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
-
         try {
-            const res = await fetch(`${baseUrl}/company/info`, {
+            const res = await fetch(`/api/company/info`, {
                 method: "POST",
                 headers: {
                     Authorization: `${tokenType} ${accessToken}`,
@@ -219,11 +213,9 @@ export default function CompanyInfo() {
             return;
         }
 
-        const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
-
         try {
             // Send all editData fields to the backend as JSON
-            const res = await fetch(`${baseUrl}/company/info`, {
+            const res = await fetch(`/api/company/info`, {
                 method: "PUT",
                 headers: {
                     Authorization: `${tokenType} ${accessToken}`,

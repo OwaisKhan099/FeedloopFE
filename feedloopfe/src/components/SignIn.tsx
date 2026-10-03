@@ -1,6 +1,6 @@
 "use client"
 
-import { use, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 type SignInSuccess = {
@@ -21,13 +21,8 @@ export default function SignInPage(){
        setLoading(true); // disable button + show "Signing in..."
 
          try {
-            // Read backend base URL from environment variable.
-            // Example in .env.local: NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
-            // If not set, baseUrl becomes "" and the call becomes "/auth/signin" (same-origin).
-            // const signinApi = process.env.NEXT_API_BASE_URL
-            const signinApi = process.env.NEXT_PUBLIC_API_BASE_URL
-
-            const res = await fetch(`${signinApi}/auth/signin`,{
+            // Use same-origin API route so the browser never calls backend auth directly.
+            const res = await fetch(`/api/auth/signin`,{
                 method: "POST",
                 headers: {"Content-Type": "application/json"}, // tells server we're sending JSON
                 body: JSON.stringify({email, password}), // send form fields to backend

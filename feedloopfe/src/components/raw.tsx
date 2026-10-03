@@ -27,13 +27,8 @@ export default function SignInPage() {
     setLoading(true); // disable button + show "Signing in..."
 
     try {
-      // Read backend base URL from environment variable.
-      // Example in .env.local: NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
-      // If not set, baseUrl becomes "" and the call becomes "/auth/signin" (same-origin).
-      const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
-
-      // Call the backend sign-in API
-      const res = await fetch(`${baseUrl}/auth/signin`, {
+      // Call same-origin API route to avoid browser CORS and env issues.
+      const res = await fetch(`/api/auth/signin`, {
         method: "POST", // sign-in is usually a POST request
         headers: { "Content-Type": "application/json" }, // tells server we're sending JSON
         body: JSON.stringify({ email, password }), // send form fields to backend

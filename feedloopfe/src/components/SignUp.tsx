@@ -32,12 +32,8 @@ export default function SignUpForm() {
         setLoading(true);   // disable button + show "Creating account…"
 
         try {
-            // Read the backend base URL from .env.local
-            // Example: NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
-            const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
-
             // POST to /auth/signup with the required payload
-            const res = await fetch(`${baseUrl}/auth/signup`, {
+            const res = await fetch(`/api/auth/signup`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" }, // tell server we're sending JSON
                 body: JSON.stringify({

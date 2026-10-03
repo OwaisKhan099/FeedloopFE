@@ -1,17 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getBackendBaseUrl } from "@/lib/backendBaseUrl";
 
-// Server-side proxy — POST /api/surveys/[key]/submit
-// Forwards to http://localhost:8000/surveys/[key]/submit
-// The backend URL stays server-side and never appears in the browser's Network tab.
-
-export async function POST(
-    req: NextRequest,
-    { params }: { params: Promise<{ key: string }> }
-) {
-    const { key } = await params;
-
+export async function POST(req: NextRequest) {
     let body: unknown;
+
     try {
         body = await req.json();
     } catch {
@@ -21,17 +13,18 @@ export async function POST(
     const baseUrl = getBackendBaseUrl();
 
     try {
-        const backendRes = await fetch(`${baseUrl}/surveys/${key}/submit`, {
+        const backendRes = await fetch(`${baseUrl}/auth/verify-email`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(body),
+            cache: "no-store",
         });
 
         const data = await backendRes.json();
         return NextResponse.json(data, { status: backendRes.status });
     } catch {
         return NextResponse.json(
-            { message: "Failed to reach survey service" },
+            { message: "Failed to reach auth service" },
             { status: 502 }
         );
     }
